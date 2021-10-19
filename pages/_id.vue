@@ -27,10 +27,10 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const data = await $axios.$get(`https://api.nuxtjs.dev/posts/1`)
+  async asyncData({ $axios, params }) {
+    const data = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
     // eslint-disable-next-line no-console
-    console.log(data);
+    // console.log(data);
     return { data }
   }
 }
