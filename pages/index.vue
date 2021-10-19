@@ -29,8 +29,6 @@
 export default {
   async asyncData({ $axios }) {
     const data = await $axios.$get(`https://api.nuxtjs.dev/posts/1`)
-    // eslint-disable-next-line no-console
-    console.log(data);
     return { data }
   }
 }
